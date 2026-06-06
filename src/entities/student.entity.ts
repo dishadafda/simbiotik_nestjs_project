@@ -11,20 +11,20 @@ import { Enrollment } from './enrollment.entity';
 @Entity('students')
 export class Student {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  name: string;
+  name!: string;
 
   @Column({ unique: true })
-  email: string;
+  email!: string;
 
   @OneToMany(() => Enrollment, (enrollment) => enrollment.student)
-  enrollments: Enrollment[];
+  enrollments!: Enrollment[];
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 }

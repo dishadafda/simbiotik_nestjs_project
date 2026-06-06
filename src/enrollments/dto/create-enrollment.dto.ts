@@ -5,10 +5,10 @@ export class CreateEnrollmentDto {
   @ApiProperty({ example: 1 })
   @IsInt()
   @IsNotEmpty()
-  studentId: number;
+  studentId!: number;
 
   @ApiProperty({ example: 1 })
   @IsInt()
   @IsNotEmpty()
-  courseId: number;
+  courseId!: number;
 }

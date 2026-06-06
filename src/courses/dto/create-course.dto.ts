@@ -5,17 +5,17 @@ export class CreateCourseDto {
   @ApiProperty({ example: 'Introduction to Computer Science' })
   @IsString()
   @IsNotEmpty()
-  title: string;
+  title!: string;
 
   @ApiProperty({ example: 'Fundamentals of programming and algorithms.' })
   @IsString()
   @IsNotEmpty()
-  description: string;
+  description!: string;
 
   @ApiProperty({ example: 30, minimum: 1 })
   @IsInt()
   @Min(1)
-  maxCapacity: number;
+  maxCapacity!: number;
 
   @ApiPropertyOptional({ example: true, default: true })
   @IsBoolean()

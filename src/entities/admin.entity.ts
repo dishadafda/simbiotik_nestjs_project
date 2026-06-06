@@ -9,17 +9,17 @@ import {
 @Entity('admins')
 export class Admin {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column({ unique: true })
-  username: string;
+  username!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 }

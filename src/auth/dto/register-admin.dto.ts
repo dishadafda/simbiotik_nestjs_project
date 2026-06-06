@@ -5,11 +5,11 @@ export class RegisterAdminDto {
   @ApiProperty({ example: 'admin' })
   @IsString()
   @IsNotEmpty()
-  username: string;
+  username!: string;
 
   @ApiProperty({ example: 'password123', minLength: 6 })
   @IsString()
   @IsNotEmpty()
   @MinLength(6)
-  password: string;
+  password!: string;
 }

@@ -15,32 +15,32 @@ import { Student } from './student.entity';
 @Index(['studentId', 'courseId'], { unique: true })
 export class Enrollment {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  studentId: number;
+  studentId!: number;
 
   @Column()
-  courseId: number;
+  courseId!: number;
 
   @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
-  enrollmentDate: Date;
+  enrollmentDate!: Date;
 
   @ManyToOne(() => Student, (student) => student.enrollments, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'studentId' })
-  student: Student;
+  student!: Student;
 
   @ManyToOne(() => Course, (course) => course.enrollments, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'courseId' })
-  course: Course;
+  course!: Course;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 }

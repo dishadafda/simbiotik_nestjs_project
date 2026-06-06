@@ -5,10 +5,10 @@ export class CreateStudentDto {
   @ApiProperty({ example: 'Jane Doe' })
   @IsString()
   @IsNotEmpty()
-  name: string;
+  name!: string;
 
   @ApiProperty({ example: 'jane.doe@university.edu' })
   @IsEmail()
   @IsNotEmpty()
-  email: string;
+  email!: string;
 }
