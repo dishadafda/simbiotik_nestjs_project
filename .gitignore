@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+
+# environment (never commit secrets)
+.env
+
+# logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+
+# test
+coverage
